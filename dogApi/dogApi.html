@@ -1,0 +1,20 @@
+<template>
+
+    <lightning-card icon-name="standard:photo" variant="Narrow" title="Dog Api">
+      <lightning-button
+        variant="sucess"
+        label="Gerar Imagens"
+        onclick={handleClick}
+      ></lightning-button>
+      <br/>
+
+      <template if:true={imageReady}>
+        <img src={pictureUrl} height="350" width="350" alt="Dog Image"/>
+      </template>
+
+      <template if:true= {loadingSpinner}>
+        <lightning-spinner size="large" alternative-text="Carregando..."></lightning-spinner>
+      </template>
+
+    </lightning-card>
+</template>
